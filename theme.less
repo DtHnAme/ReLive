@@ -573,24 +573,21 @@
 
         body:not(.mq-playing) & {
             .brt {
-                @keyframes appear_brtlist {
-                    0% {
-                      opacity: 0;
-                      transform: translateY(40px);
-                    }
-                    100% {
-                      opacity: 1;
-                      transform: translateY(0);
-                    }
-                }
-    
                 opacity: 1 !important;
     
                 .brtAndEnvSoundList {
-                    animation: appear_brtlist 0.2s forwards;
                     background: var(--layer-background);
                     backdrop-filter: blur(var(--layer-blur));
                     border-radius: 8px;
+                    display: block !important;
+                    transition: all 0.2s ease-out;
+                    opacity: 1 !important;
+
+                    &.f-dn {
+                        opacity: 0 !important;
+                        visibility: hidden;
+                        transform: translateY(40px);
+                    }
             
                     &::before {
                         display: none;   
@@ -599,21 +596,12 @@
             }
 
             .prg-spk {
-                @keyframes appear_prg-spk {
-                    0% {
-                      opacity: 0;
-                      transform: translateY(20px);
-                    }
-                    100% {
-                      opacity: 1;
-                      transform: translateY(0);
-                    }
-                }
-    
-                animation: appear_prg-spk 0.2s forwards;
                 border-radius: 16px;
                 background: var(--layer-background);
                 backdrop-filter: blur(var(--layer-blur));
+                display: block !important;
+                transition: all 0.2s ease-out;
+    		    opacity: 1;
     
                 .track,
                 .has {
@@ -633,6 +621,12 @@
                     background: transparent;
                     padding: 0;
                     margin: -5px 0 5px 0;
+                }
+    
+                &.f-dn {
+                    opacity: 0 !important;
+                    visibility: hidden;
+                    transform: translateY(10px);
                 }
     
                 &::after {
