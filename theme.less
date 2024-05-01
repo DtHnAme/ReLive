@@ -575,6 +575,10 @@
 
         body:not(.mq-playing) & {
             .brt {
+                & when(not(@modify-auto-hidden-bottombar)) {
+                    opacity: 1 !important;
+                }
+
                 .brtAndEnvSoundList {
                     background: var(--layer-background);
                     backdrop-filter: blur(var(--layer-blur));
