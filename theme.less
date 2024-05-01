@@ -4,6 +4,7 @@
 .menu-mixin();
 .sidebar-mixin();
 .playlist-list-mixin();
+.hidden-bottombar-btns-mixin();
 
 .g-mn {
     .playlist-page-mixin();
@@ -11,6 +12,7 @@
 }
 
 @modify-play-page: true; //: name: 修改播放页面 | type: checkbox
+@modify-auto-hidden-bottombar: true; //: name: 自动隐藏播放栏按钮 | type: checkbox
 .play-page-mixin();
 
 @main-player-left: 7%;
@@ -573,8 +575,6 @@
 
         body:not(.mq-playing) & {
             .brt {
-                opacity: 1 !important;
-    
                 .brtAndEnvSoundList {
                     background: var(--layer-background);
                     backdrop-filter: blur(var(--layer-blur));
@@ -1465,4 +1465,33 @@
             }
         }
     }
+}
+
+.hidden-bottombar-btns-mixin() when (@modify-auto-hidden-bottombar) {
+    body:not(.mq-playing) {
+        .m-pinfo .btn:not(.btn-love),
+        #main-player>*:not(.f-cp, .prg, time),
+        #main-player>.audioEffect,
+        #main-player>.spk,
+        #main-player>.listenTogether,
+        #main-player>.type,
+        #main-player>.word {
+            transition: all 0.3s ease-in;
+            opacity: 0;
+        }
+    }
+
+    body.bottombar-hover, body.mq-playing-scroll, body.always-show-bottombar {
+        .m-pinfo .btn:not(.btn-love),
+        #main-player>*:not(.f-cp, .prg, time),
+        #main-player>.audioEffect,
+        #main-player>.spk,
+        #main-player>.listenTogether,
+        #main-player>.type,
+        #main-player>.word,
+        #main-player>.list {
+            transition: all 0.3s ease;
+            opacity: 1;
+        }
+    }    
 }
