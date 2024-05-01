@@ -1473,6 +1473,38 @@
             transition: all 0.3s ease-in;
             opacity: 0;
         }
+
+        #main-player> {
+            .type,
+            .word {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            .audioEffect,
+            .listenTogether {
+                transform: translateX(30px);
+            }
+
+            .brt,
+            .spk {
+                transform: translateX(30px) translateY(-50%);
+            }
+
+            .btnc {
+                transition: all 0.1s ease-in;
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            .btnc-prv {
+                transform: translateX(30px) scale(0.7);
+            }
+
+            .btnc-nxt {
+                transform: translateX(-30px) scale(0.7);
+            }
+        }
     }
 
     body.bottombar-hover, body.mq-playing-scroll, body.always-show-bottombar {
@@ -1487,5 +1519,35 @@
             transition: all 0.3s ease;
             opacity: 1;
         }
+
+        #main-player> {
+            .audioEffect,
+            .listenTogether,
+            .brt,
+            .spk {
+                transition: all 0.2s ease;
+                opacity: 1;
+            }
+
+            .audioEffect,
+            .listenTogether {
+                transform: translateX(0);
+            }
+
+            .brt,
+            .spk {
+                transform: translateX(0) translateY(-50%);
+            }
+
+            .type,
+            .word,
+
+            .btnc-prv,
+            .btnc-nxt {
+                transition: all 0.3s ease;
+                opacity: 1;
+                transform: translate(0);
+            }
+        } 
     }    
 }
