@@ -1,16 +1,20 @@
-# ReLive
+# ReLive-Nextgen?
 
-![image](https://user-images.githubusercontent.com/49718840/218290384-1b2feecc-34ff-4a12-aaa6-fe316333093f.png)
+![image](https://github.com/DtHnAme/ReLive/assets/32587943/d162e86b-8c7d-4be4-94d3-81c3e4032e47)
 
-![image](https://user-images.githubusercontent.com/49718840/218294467-830e74c5-f66f-44ff-9ecf-919d6502dcee.png)
+![image](https://github.com/DtHnAme/ReLive/assets/32587943/ac72cec9-7db2-43fa-92f1-ee92ad849941)
 
-![image](https://user-images.githubusercontent.com/49718840/218294372-b66cf9fd-3b72-4462-b0a7-9227ee8d9959.png)
+![image](https://github.com/DtHnAme/ReLive/assets/32587943/e6b95c78-81f5-4d36-99fe-0e3f4fdac9c5)
 
-![image](https://user-images.githubusercontent.com/49718840/218294393-dcc870db-3088-44d4-84e4-86959d73eff8.png)
+![image](https://github.com/DtHnAme/ReLive/assets/32587943/b4b6c051-b5f0-49e8-9315-c68b77361c38)
 
-基于 [Ark Theme](https://github.com/BetterNCM/ArkTheme) 修改而成。
+基于 [ReLive](https://github.com/FlysoftBeta/ReLive) 修改而成。
+
+搭配 TinyNCM 食用更佳！!
 
 # 致谢
+
+[ReLive](https://github.com/FlysoftBeta/ReLive)
 
 [Ark Theme](https://github.com/BetterNCM/ArkTheme)
 
